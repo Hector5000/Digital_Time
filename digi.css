@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.name{
+    padding-top: 20px;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient( 45deg, #08001f, #30197d);
+    background-size: cover;
+    color: #fff;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: josie;
+}
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient( 45deg, #08001f, #30197d);
+    background-size: cover;
+    color: #fff;
+    position: relative;
+}
+
+.container{
+    width: 800px;
+    height: 150px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.clock{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(235, 0, 255, 0.11);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(40px);
+}
+
+.container::before{
+    content: '';
+    height: 180px;
+    width: 180px;
+    border-radius: 5px;
+    background: #f41b75;
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    z-index: -1;
+}
+.container::after{
+    content: '';
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    background: #419aff;
+    position: absolute;
+    right: -30px;
+    bottom: -50px;
+    z-index: -1;
+}
+
+.clock span{
+    font-size: 80px;
+    text-align: center;
+    width: 110px;
+    display: inline-block;
+    position: relative;
+}
+
+.clock span::after{
+    font-size: 16px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#hrs::after{
+    content: 'HOURS';
+}
+#min::after{
+    content: 'MINS';
+}
+#sec::after{
+    content: 'SEC';
+}
+
+@media (max-width: 800px) {
+    .name{
+        width: 100%;
+        height: 60px;
+    }
+    .hero{
+        width: 100%;
+        height: 100%;
+        background: linear-gradient( 45deg, #08001f, #30197d);
+        color: #fff;
+    }
+
+    .container{
+        width: 350px;
+        height: 150px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    
+  }
